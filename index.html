@@ -1,0 +1,33 @@
+<script>
+
+let playersScore = 0
+let computerScore = 0
+
+function getComputerChoice() {
+    let randomNum = Math.floor(Math.random() * 3);  // Generate 0, 1, or 2
+    let choice;
+
+    if (randomNum === 0) {
+        choice = "Rock";
+    } else if (randomNum === 1) {
+        choice = "Paper";
+    } else {
+        choice = "Scissors";
+    }
+
+    return choice;  // Return the final choice
+}
+
+console.log(getComputerChoice());  // Call the function and log the result
+
+let getHumanChoice = prompt("Please type your choice below");
+
+console.log(`Playeer chooses: ${getHumanChoice}`)
+
+function playRound (humanchoice, computerchoice) {
+
+}
+
+
+</script>
+
