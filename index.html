@@ -28,15 +28,17 @@
     
     function playRound(humanSelection, computerSelection) {
         if (humanSelection === computerSelection) {
-            return "It's a tie!";
+            return `It's a tie! Score: Player ${playersScore} - Computer ${computerScore}`;
         } else if (
             (humanSelection === "rock" && computerSelection === "scissors") ||
             (humanSelection === "paper" && computerSelection === "rock") ||
             (humanSelection === "scissors" && computerSelection === "paper")
         ) {
-            return "You win!";
+            playersScore++;
+            return `You win! Score: Player ${playersScore} - Computer ${computerScore}`;
         } else {
-            return "You lose!";
+            computerScore++;
+            return  `You lose! Score: Player ${playersScore} - Computer ${computerScore}`;
         }
     }
     
